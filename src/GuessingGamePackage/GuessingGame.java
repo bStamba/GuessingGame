@@ -24,19 +24,27 @@ public class GuessingGame {
 		//Call our playerGuess method to get the input for our players' guess.
 		p1guess = player1.getPlayerGuess();
 		p2guess = player2.getPlayerGuess();
-		p3guess = player3.getPlayerGuess();		
+		p3guess = player3.getPlayerGuess();
+		//Lets close our scanners.
 		player1.scannerClose();
+		player2.scannerClose();
+		player3.scannerClose();
 		
 		System.out.println("Our secret number is: " + actualNumber);
 		
 		//Use conditional statement to see whether the players guessed correctly or incorrectly, and state the result.
-		if(p1guess == actualNumber) {System.out.println("Player 1 guessed CORRECTLY! WINNER!");}
+		if(p1guess == actualNumber) {System.out.println("Player 1 guessed CORRECTLY! WINNER! Thanks for playing!");}
 		else {System.out.println("Player 1 guessed INCORRECTLY! Better luck next time.");}
 		
-		if(p2guess == actualNumber) {System.out.println("Player 2 guessed CORRECTLY! WINNER!");}
+		if(p2guess == actualNumber) {System.out.println("Player 2 guessed CORRECTLY! WINNER! Thanks for playing!");}
 		else {System.out.println("Player 2 guessed INCORRECTLY! Better luck next time.");}
 		
-		if(p3guess == actualNumber) {System.out.println("Player 3 guessed CORRECTLY! WINNER!");}
-		else {System.out.println("Player 3 guessed INCORRECTLY! Better luck next time.");}					
+		if(p3guess == actualNumber) {System.out.println("Player 3 guessed CORRECTLY! WINNER! Thanks for playing!");}
+		else {System.out.println("Player 3 guessed INCORRECTLY! Better luck next time.");}	
+		
+		//If all 3 guessed incorrectly tell the audience we had no winners.
+		if(p1guess != actualNumber && p2guess != actualNumber && p3guess != actualNumber) {
+			System.out.println("No winners tonight folks!! Thanks for playing!");
+		}		
 	}
 }

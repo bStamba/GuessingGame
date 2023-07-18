@@ -7,7 +7,6 @@ public class GuessingGameMain {
 		GuessingGame guessGame = new GuessingGame();
 		guessGame.startGame();
 		
-		System.out.println("Thanks for playing!");
 		System.exit(0);
 	}
 }
